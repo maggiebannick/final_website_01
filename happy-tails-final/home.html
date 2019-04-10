@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="style.css" rel="stylesheet">
+        <link rel="shortcut icon" href="favicon.ico?v1" type="image/x-icon"/>
+        <meta charset="UTF-8">
+        <title>Home</title>
+    </head>
+    <body>
+
+    <div class="top">
+        <a href="home.html"><img alt="logo" class="logo" src="images/Happy-tails-rescue.jpg"></a>
+        <div class="topnav-title">
+            <div class="title">
+                Happy Tails Rescue
+            </div>
+        </div>
+    </div>
+
+    <nav>
+        <div class="topnav">
+            <div class="innerNav">
+            <a class="active" href="home.html">Home</a>
+            <a href="login.html">Login</a>
+            <a href="pets.html">Pets</a>
+            <a href="adopt.html">Adopt</a>
+            </div>
+
+        </div>
+    </nav>
+
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <img alt="adopt" src="images/slideshow-page-one.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <img alt="adopt today" src="images/slideshow-page-one-2.jpg" style="width:100%">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+    </div>
+    <script>
+
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+        }
+    </script>
+
+
+
+
+
+
+</body>
+
+<footer>
+</footer>
+
+</html>

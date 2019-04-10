@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css"/>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+
+<body>
+
+<div class="top">
+    <a href="home.html"><img alt="logo" class="logo" src="images/Happy-tails-rescue.jpg"></a>
+    <div class="topnav-title">
+        <div class="title">
+            Happy Tails Rescue
+        </div>
+    </div>
+</div>
+
+<nav>
+    <div class="topnav">
+        <div class="innerNav">
+            <a class="active" href="home.html">Home</a>
+            <a href="login.html">Login</a>
+            <a href="pets.html">Pets</a>
+            <a href="adopt.html">Adopt</a>
+        </div>
+    </div>
+</nav>
+
+<div class="logincontainer">
+    <div class="logintitle"><h2>Login Form</h2>
+    </div>
+    <form action>
+        <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" id="uname" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" id="psw" required>
+
+            <button type="submit" class="lo">Login</button>
+
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+        </div>
+
+        <div class="btmcontainer">
+            <button type="button" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">Password?</a></span>
+        </div>
+    </form>
+</div>
+</body>
+</html>
